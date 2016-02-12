@@ -102,13 +102,47 @@ class: middle
 ## .red[$ \cdot $]
 ]
 .right-column[
-[surprise javascript]
+[surprise javascript]    
+
+    function double_and_increment(a) {
+        return (a * 2) + 1;
+    }
+]
+
+---
+
+class: middle
+
+.left-column[
+## composition
+## .red[$ \cdot $]
+]
+.right-column[
+[surprise javascript]    
+
+    function double_and_increment(a) {
+        return (a * 2) + 1;
+    }
+
+    // destructure
+
+    function increment(a) {
+        return a + 1;
+    }
+
+    function double(a) {
+        return a * 2;
+    }
+
+    // functional composition
 
     var compose = function(f, g) {
         return function() {
             return f.call(this, g.apply(this, arguments));
         };
     };
+
+    compose(increment, double)(2);
 ]
 
 ---
