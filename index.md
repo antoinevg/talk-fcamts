@@ -406,3 +406,8 @@ https://github.com/antoinevg/talk-fcamts/
 
 .footnote[presentation powered by [remark](https://github.com/gnab/remark)]
 
+---
+
+class: inverse, center, middle
+
+![dth](dth.png)
