@@ -1,6 +1,6 @@
 
-
+```
 npm install express
 node server.js
-
-http://localhost:3000
+open http://localhost:3000
+```
