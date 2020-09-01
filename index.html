@@ -20,7 +20,7 @@
     <body>
         <script src="lib/remark-latest.min.js"></script>
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener("load", function() {
                 var slideshow = remark.create({
                     //ratio: "4:3",
                     ratio: "16:9",
@@ -40,7 +40,10 @@
                     }
                 });
                 MathJax.Hub.Configured();
-            }, false);
+                setTimeout(function () {
+                    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+                }, 500);
+            });
         </script>
     </body>
 </html>
